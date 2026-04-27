@@ -1,345 +1,329 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="fr">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2685.4">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Start3A — Comprends ton 3ème pilier. Choisis librement.</title>
+<meta name="description" content="Conseil indépendant et neutre en prévoyance 3ème pilier pour toute la Suisse. On t'explique tout, on compare pour toi, tu décides. Certifié IAF, 8 ans d'expérience, trilingue FR/DE/EN.">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#0E0F14;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#F8FAFC}
+:root{
+  --bg:#0E0F14;--bg2:#161820;--bg3:#1E2028;
+  --neon:#22C55E;--neon-dim:rgba(34,197,94,0.12);
+  --violet:#7C3AED;--amber:#F59E0B;
+  --white:#F8FAFC;--muted:#94A3B8;
+  --border:rgba(255,255,255,0.08);--card:rgba(255,255,255,0.04);
+}
+.wrap{max-width:720px;margin:0 auto;padding:1.5rem}
+.nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:2rem;padding-bottom:1rem;border-bottom:0.5px solid var(--border)}
+.logo{font-size:22px;font-weight:600;letter-spacing:-0.04em;text-decoration:none}
+.logo .g{color:var(--neon)}.logo .v{color:#A78BFA}.logo .y{color:var(--amber)}
+.langs{display:flex;gap:5px}
+.lng{background:var(--card);border:0.5px solid var(--border);color:var(--muted);font-size:12px;padding:5px 11px;border-radius:20px;cursor:pointer;font-weight:500;transition:all 0.15s}
+.lng.on{background:var(--neon);color:#052E16;border-color:var(--neon)}
+.hero{background:var(--bg2);border-radius:18px;padding:2.5rem 2rem 2rem;margin-bottom:1.25rem;position:relative;overflow:hidden}
+.hero-glow1{position:absolute;top:-60px;right:-60px;width:220px;height:220px;background:var(--violet);border-radius:50%;filter:blur(80px);opacity:0.25;pointer-events:none}
+.hero-glow2{position:absolute;bottom:-40px;left:-20px;width:160px;height:160px;background:var(--neon);border-radius:50%;filter:blur(70px);opacity:0.15;pointer-events:none}
+.htag{display:inline-flex;align-items:center;gap:7px;background:var(--neon-dim);border:0.5px solid rgba(34,197,94,0.3);color:var(--neon);font-size:11px;font-weight:500;padding:5px 14px;border-radius:20px;margin-bottom:1.25rem}
+.htag::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--neon);flex-shrink:0}
+.hero h1{font-size:32px;font-weight:600;color:var(--white);line-height:1.18;margin-bottom:0.75rem;max-width:480px}
+.hero h1 .acc{color:var(--neon)}
+.hero p{font-size:14px;color:var(--muted);max-width:440px;line-height:1.7;margin-bottom:1.75rem}
+.cta-row{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.btn-prime{background:var(--neon);color:#052E16;border:none;padding:13px 26px;border-radius:12px;font-size:14px;font-weight:600;cursor:pointer;transition:opacity .15s;text-decoration:none;display:inline-block}
+.btn-prime:hover{opacity:.88}
+.btn-sec{font-size:13px;color:var(--neon);cursor:pointer;border-bottom:1px solid rgba(34,197,94,0.4);padding-bottom:1px;background:none;border-top:none;border-left:none;border-right:none}
+.steps{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:1.25rem}
+.step{background:var(--card);border:0.5px solid var(--border);border-radius:16px;padding:1.25rem;position:relative;overflow:hidden}
+.step.s1{border-color:rgba(124,58,237,0.3)}
+.step.s2{border-color:rgba(34,197,94,0.3)}
+.step.s3{border-color:rgba(245,158,11,0.3)}
+.snum{position:absolute;right:12px;top:2px;font-size:52px;font-weight:700;opacity:0.06;color:var(--white);line-height:1}
+.sicon{font-size:22px;margin-bottom:8px;display:block}
+.step h4{font-size:13px;font-weight:600;color:var(--white);margin-bottom:4px}
+.step p{font-size:12px;color:var(--muted);line-height:1.55}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:1.25rem}
+.stat{background:var(--card);border:0.5px solid var(--border);border-radius:14px;padding:1rem;text-align:center}
+.stn{font-size:20px;font-weight:600}
+.stn.ng{color:var(--neon)}.stn.nv{color:#A78BFA}.stn.na{color:var(--amber)}
+.stl{font-size:11px;color:var(--muted);margin-top:3px;line-height:1.4}
+.promise{background:var(--neon-dim);border:1px solid rgba(34,197,94,0.25);border-radius:16px;padding:1.25rem 1.5rem;margin-bottom:1.25rem;display:flex;gap:14px;align-items:flex-start}
+.promise-icon{font-size:24px;flex-shrink:0;margin-top:2px}
+.promise h4{font-size:14px;font-weight:600;color:var(--neon);margin-bottom:5px}
+.promise p{font-size:13px;color:var(--muted);line-height:1.6}
+.calc{background:var(--violet);border-radius:18px;padding:1.5rem;margin-bottom:1.25rem;position:relative;overflow:hidden}
+.calc-glow{position:absolute;bottom:-40px;right:-40px;width:150px;height:150px;background:#A78BFA;border-radius:50%;filter:blur(60px);opacity:0.3;pointer-events:none}
+.ch{display:flex;align-items:center;gap:10px;margin-bottom:1.25rem;position:relative}
+.cico{width:34px;height:34px;background:rgba(255,255,255,0.15);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+.calc h3{font-size:16px;font-weight:600;color:var(--white)}
+.sl-row{margin-bottom:1rem}
+.sl-lbl{display:flex;justify-content:space-between;margin-bottom:6px}
+.sl-lbl span{font-size:13px;color:rgba(255,255,255,0.6)}
+.sl-lbl strong{font-size:13px;font-weight:600;color:var(--white)}
+input[type=range]{width:100%;accent-color:var(--amber)}
+.res{background:rgba(0,0,0,0.25);border-radius:14px;padding:1.1rem 1.25rem;margin-top:1.25rem;display:flex;justify-content:space-between;align-items:center;gap:12px;border:0.5px solid rgba(245,158,11,0.3)}
+.res-l p{font-size:12px;color:rgba(255,255,255,0.5);margin-bottom:3px}
+.res-l span{font-size:28px;font-weight:600;color:var(--amber)}
+.res-btn{background:var(--amber);color:#451A03;border:none;padding:10px 18px;border-radius:10px;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap;flex-shrink:0}
+.res-btn:hover{opacity:.88}
+.cdisc{font-size:11px;color:rgba(255,255,255,0.35);margin-top:10px;line-height:1.5}
+.slbl{font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-bottom:7px}
+.sh2{font-size:19px;font-weight:600;color:var(--white);margin-bottom:4px}
+.ssub{font-size:13px;color:var(--muted);margin-bottom:1.25rem;line-height:1.55}
+.sec{margin-bottom:1.25rem}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:1.25rem}
+.cc{background:var(--card);border:0.5px solid var(--border);border-radius:16px;padding:1.25rem}
+.cc.rec{border:1.5px solid var(--neon);background:var(--neon-dim)}
+.cbdg{display:inline-block;font-size:11px;padding:3px 10px;border-radius:20px;margin-bottom:10px;font-weight:600}
+.cbdg.r{background:rgba(34,197,94,0.2);color:var(--neon)}
+.cbdg.a{background:var(--card);color:var(--muted);border:0.5px solid var(--border)}
+.cc h4{font-size:15px;font-weight:600;color:var(--white);margin-bottom:5px}
+.cc p{font-size:12px;color:var(--muted);line-height:1.55;margin-bottom:10px}
+.ft{font-size:12px;padding:4px 0;border-bottom:0.5px solid var(--border);line-height:1.5}
+.ft:last-child{border:none}
+.ft.y{color:var(--neon)}.ft.n{opacity:.35;text-decoration:line-through;color:var(--muted)}
+.trust{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:1.25rem}
+.tc{background:var(--card);border:0.5px solid var(--border);border-radius:14px;padding:1rem;text-align:center}
+.tico{font-size:22px;margin-bottom:7px;display:block}
+.tlbl{font-size:13px;font-weight:600;color:var(--white);margin-bottom:3px}
+.tsub{font-size:11px;color:var(--muted);line-height:1.45}
+.rdv{background:var(--bg2);border:1.5px solid rgba(34,197,94,0.25);border-radius:20px;padding:1.75rem;margin-bottom:1.25rem;position:relative;overflow:hidden}
+.rdv-glow{position:absolute;top:-60px;right:-60px;width:180px;height:180px;background:var(--neon);border-radius:50%;filter:blur(90px);opacity:0.1;pointer-events:none}
+.rdv h3{font-size:20px;font-weight:600;color:var(--white);margin-bottom:5px;position:relative}
+.rdvsub{font-size:13px;color:var(--muted);margin-bottom:1.5rem;line-height:1.55}
+.fg{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px}
+.ff{margin-bottom:10px}
+.flbl{font-size:11px;color:var(--muted);margin-bottom:4px;display:block;font-weight:500;letter-spacing:.03em}
+.fi{width:100%;background:var(--bg3);border:0.5px solid var(--border);border-radius:10px;padding:10px 12px;font-size:13px;color:var(--white);outline:none;transition:border-color .15s}
+.fi::placeholder{color:rgba(255,255,255,0.2)}
+.fi:focus{border-color:rgba(34,197,94,0.5)}
+.fsel{width:100%;background:var(--bg3);border:0.5px solid var(--border);border-radius:10px;padding:10px 12px;font-size:13px;color:var(--white);outline:none;cursor:pointer;-webkit-appearance:none}
+.fsel option{background:#1E2028}
+.rg{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:1rem}
+.rb{background:var(--bg3);border:0.5px solid var(--border);color:var(--muted);font-size:12px;padding:6px 13px;border-radius:20px;cursor:pointer;font-weight:500;transition:all .15s}
+.rb.on{background:var(--neon-dim);color:var(--neon);border-color:rgba(34,197,94,0.4)}
+.sub{background:var(--neon);color:#052E16;border:none;padding:13px;border-radius:12px;font-size:14px;font-weight:600;cursor:pointer;width:100%;margin-top:4px;transition:opacity .15s}
+.sub:hover{opacity:.88}
+.faq-item{border-bottom:0.5px solid var(--border);padding:14px 0;cursor:pointer}
+.faq-q{display:flex;justify-content:space-between;align-items:center;font-size:14px;font-weight:500;color:var(--white);gap:12px}
+.faq-a{font-size:13px;color:var(--muted);line-height:1.6;margin-top:8px;display:none}
+.faq-a.open{display:block}
+.chev{transition:transform .2s;font-size:13px;color:var(--muted);flex-shrink:0}
+.chev.open{transform:rotate(180deg)}
+.footer{text-align:center;padding:1.5rem 0;border-top:0.5px solid var(--border)}
+.flogo{font-size:20px;font-weight:600;letter-spacing:-.04em;margin-bottom:8px}
+.footer p{font-size:11px;color:var(--muted);line-height:1.7}
+@media(max-width:540px){
+  .steps{grid-template-columns:1fr}
+  .stats{grid-template-columns:1fr 1fr}
+  .compare{grid-template-columns:1fr}
+  .trust{grid-template-columns:1fr 1fr}
+  .fg{grid-template-columns:1fr}
+  .hero h1{font-size:26px}
+}
+</style>
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="fr"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1">&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
-<p class="p1">&lt;title&gt;Start3A — Comprends ton 3ème pilier. Choisis librement.&lt;/title&gt;</p>
-<p class="p1">&lt;meta name="description" content="Conseil indépendant et neutre en prévoyance 3ème pilier pour toute la Suisse. On t'explique tout, on compare pour toi, tu décides. Certifié IAF, 8 ans d'expérience, trilingue FR/DE/EN."&gt;</p>
-<p class="p1">&lt;style&gt;</p>
-<p class="p1">*{box-sizing:border-box;margin:0;padding:0}</p>
-<p class="p1">body{background:#0E0F14;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#F8FAFC}</p>
-<p class="p1">:root{</p>
-<p class="p1"><span class="Apple-converted-space">  </span>--bg:#0E0F14;--bg2:#161820;--bg3:#1E2028;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>--neon:#22C55E;--neon-dim:rgba(34,197,94,0.12);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>--violet:#7C3AED;--amber:#F59E0B;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>--white:#F8FAFC;--muted:#94A3B8;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>--border:rgba(255,255,255,0.08);--card:rgba(255,255,255,0.04);</p>
-<p class="p1">}</p>
-<p class="p1">.wrap{max-width:720px;margin:0 auto;padding:1.5rem}</p>
-<p class="p1">.nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:2rem;padding-bottom:1rem;border-bottom:0.5px solid var(--border)}</p>
-<p class="p1">.logo{font-size:22px;font-weight:600;letter-spacing:-0.04em;text-decoration:none}</p>
-<p class="p1">.logo .g{color:var(--neon)}.logo .v{color:#A78BFA}.logo .y{color:var(--amber)}</p>
-<p class="p1">.langs{display:flex;gap:5px}</p>
-<p class="p1">.lng{background:var(--card);border:0.5px solid var(--border);color:var(--muted);font-size:12px;padding:5px 11px;border-radius:20px;cursor:pointer;font-weight:500;transition:all 0.15s}</p>
-<p class="p1">.lng.on{background:var(--neon);color:#052E16;border-color:var(--neon)}</p>
-<p class="p1">.hero{background:var(--bg2);border-radius:18px;padding:2.5rem 2rem 2rem;margin-bottom:1.25rem;position:relative;overflow:hidden}</p>
-<p class="p1">.hero-glow1{position:absolute;top:-60px;right:-60px;width:220px;height:220px;background:var(--violet);border-radius:50%;filter:blur(80px);opacity:0.25;pointer-events:none}</p>
-<p class="p1">.hero-glow2{position:absolute;bottom:-40px;left:-20px;width:160px;height:160px;background:var(--neon);border-radius:50%;filter:blur(70px);opacity:0.15;pointer-events:none}</p>
-<p class="p1">.htag{display:inline-flex;align-items:center;gap:7px;background:var(--neon-dim);border:0.5px solid rgba(34,197,94,0.3);color:var(--neon);font-size:11px;font-weight:500;padding:5px 14px;border-radius:20px;margin-bottom:1.25rem}</p>
-<p class="p1">.htag::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--neon);flex-shrink:0}</p>
-<p class="p1">.hero h1{font-size:32px;font-weight:600;color:var(--white);line-height:1.18;margin-bottom:0.75rem;max-width:480px}</p>
-<p class="p1">.hero h1 .acc{color:var(--neon)}</p>
-<p class="p1">.hero p{font-size:14px;color:var(--muted);max-width:440px;line-height:1.7;margin-bottom:1.75rem}</p>
-<p class="p1">.cta-row{display:flex;align-items:center;gap:14px;flex-wrap:wrap}</p>
-<p class="p1">.btn-prime{background:var(--neon);color:#052E16;border:none;padding:13px 26px;border-radius:12px;font-size:14px;font-weight:600;cursor:pointer;transition:opacity .15s;text-decoration:none;display:inline-block}</p>
-<p class="p1">.btn-prime:hover{opacity:.88}</p>
-<p class="p1">.btn-sec{font-size:13px;color:var(--neon);cursor:pointer;border-bottom:1px solid rgba(34,197,94,0.4);padding-bottom:1px;background:none;border-top:none;border-left:none;border-right:none}</p>
-<p class="p1">.steps{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:1.25rem}</p>
-<p class="p1">.step{background:var(--card);border:0.5px solid var(--border);border-radius:16px;padding:1.25rem;position:relative;overflow:hidden}</p>
-<p class="p1">.step.s1{border-color:rgba(124,58,237,0.3)}</p>
-<p class="p1">.step.s2{border-color:rgba(34,197,94,0.3)}</p>
-<p class="p1">.step.s3{border-color:rgba(245,158,11,0.3)}</p>
-<p class="p1">.snum{position:absolute;right:12px;top:2px;font-size:52px;font-weight:700;opacity:0.06;color:var(--white);line-height:1}</p>
-<p class="p1">.sicon{font-size:22px;margin-bottom:8px;display:block}</p>
-<p class="p1">.step h4{font-size:13px;font-weight:600;color:var(--white);margin-bottom:4px}</p>
-<p class="p1">.step p{font-size:12px;color:var(--muted);line-height:1.55}</p>
-<p class="p1">.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:1.25rem}</p>
-<p class="p1">.stat{background:var(--card);border:0.5px solid var(--border);border-radius:14px;padding:1rem;text-align:center}</p>
-<p class="p1">.stn{font-size:20px;font-weight:600}</p>
-<p class="p1">.stn.ng{color:var(--neon)}.stn.nv{color:#A78BFA}.stn.na{color:var(--amber)}</p>
-<p class="p1">.stl{font-size:11px;color:var(--muted);margin-top:3px;line-height:1.4}</p>
-<p class="p1">.promise{background:var(--neon-dim);border:1px solid rgba(34,197,94,0.25);border-radius:16px;padding:1.25rem 1.5rem;margin-bottom:1.25rem;display:flex;gap:14px;align-items:flex-start}</p>
-<p class="p1">.promise-icon{font-size:24px;flex-shrink:0;margin-top:2px}</p>
-<p class="p1">.promise h4{font-size:14px;font-weight:600;color:var(--neon);margin-bottom:5px}</p>
-<p class="p1">.promise p{font-size:13px;color:var(--muted);line-height:1.6}</p>
-<p class="p1">.calc{background:var(--violet);border-radius:18px;padding:1.5rem;margin-bottom:1.25rem;position:relative;overflow:hidden}</p>
-<p class="p1">.calc-glow{position:absolute;bottom:-40px;right:-40px;width:150px;height:150px;background:#A78BFA;border-radius:50%;filter:blur(60px);opacity:0.3;pointer-events:none}</p>
-<p class="p1">.ch{display:flex;align-items:center;gap:10px;margin-bottom:1.25rem;position:relative}</p>
-<p class="p1">.cico{width:34px;height:34px;background:rgba(255,255,255,0.15);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}</p>
-<p class="p1">.calc h3{font-size:16px;font-weight:600;color:var(--white)}</p>
-<p class="p1">.sl-row{margin-bottom:1rem}</p>
-<p class="p1">.sl-lbl{display:flex;justify-content:space-between;margin-bottom:6px}</p>
-<p class="p1">.sl-lbl span{font-size:13px;color:rgba(255,255,255,0.6)}</p>
-<p class="p1">.sl-lbl strong{font-size:13px;font-weight:600;color:var(--white)}</p>
-<p class="p1">input[type=range]{width:100%;accent-color:var(--amber)}</p>
-<p class="p1">.res{background:rgba(0,0,0,0.25);border-radius:14px;padding:1.1rem 1.25rem;margin-top:1.25rem;display:flex;justify-content:space-between;align-items:center;gap:12px;border:0.5px solid rgba(245,158,11,0.3)}</p>
-<p class="p1">.res-l p{font-size:12px;color:rgba(255,255,255,0.5);margin-bottom:3px}</p>
-<p class="p1">.res-l span{font-size:28px;font-weight:600;color:var(--amber)}</p>
-<p class="p1">.res-btn{background:var(--amber);color:#451A03;border:none;padding:10px 18px;border-radius:10px;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap;flex-shrink:0}</p>
-<p class="p1">.res-btn:hover{opacity:.88}</p>
-<p class="p1">.cdisc{font-size:11px;color:rgba(255,255,255,0.35);margin-top:10px;line-height:1.5}</p>
-<p class="p1">.slbl{font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-bottom:7px}</p>
-<p class="p1">.sh2{font-size:19px;font-weight:600;color:var(--white);margin-bottom:4px}</p>
-<p class="p1">.ssub{font-size:13px;color:var(--muted);margin-bottom:1.25rem;line-height:1.55}</p>
-<p class="p1">.sec{margin-bottom:1.25rem}</p>
-<p class="p1">.compare{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:1.25rem}</p>
-<p class="p1">.cc{background:var(--card);border:0.5px solid var(--border);border-radius:16px;padding:1.25rem}</p>
-<p class="p1">.cc.rec{border:1.5px solid var(--neon);background:var(--neon-dim)}</p>
-<p class="p1">.cbdg{display:inline-block;font-size:11px;padding:3px 10px;border-radius:20px;margin-bottom:10px;font-weight:600}</p>
-<p class="p1">.cbdg.r{background:rgba(34,197,94,0.2);color:var(--neon)}</p>
-<p class="p1">.cbdg.a{background:var(--card);color:var(--muted);border:0.5px solid var(--border)}</p>
-<p class="p1">.cc h4{font-size:15px;font-weight:600;color:var(--white);margin-bottom:5px}</p>
-<p class="p1">.cc p{font-size:12px;color:var(--muted);line-height:1.55;margin-bottom:10px}</p>
-<p class="p1">.ft{font-size:12px;padding:4px 0;border-bottom:0.5px solid var(--border);line-height:1.5}</p>
-<p class="p1">.ft:last-child{border:none}</p>
-<p class="p1">.ft.y{color:var(--neon)}.ft.n{opacity:.35;text-decoration:line-through;color:var(--muted)}</p>
-<p class="p1">.trust{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:1.25rem}</p>
-<p class="p1">.tc{background:var(--card);border:0.5px solid var(--border);border-radius:14px;padding:1rem;text-align:center}</p>
-<p class="p1">.tico{font-size:22px;margin-bottom:7px;display:block}</p>
-<p class="p1">.tlbl{font-size:13px;font-weight:600;color:var(--white);margin-bottom:3px}</p>
-<p class="p1">.tsub{font-size:11px;color:var(--muted);line-height:1.45}</p>
-<p class="p1">.rdv{background:var(--bg2);border:1.5px solid rgba(34,197,94,0.25);border-radius:20px;padding:1.75rem;margin-bottom:1.25rem;position:relative;overflow:hidden}</p>
-<p class="p1">.rdv-glow{position:absolute;top:-60px;right:-60px;width:180px;height:180px;background:var(--neon);border-radius:50%;filter:blur(90px);opacity:0.1;pointer-events:none}</p>
-<p class="p1">.rdv h3{font-size:20px;font-weight:600;color:var(--white);margin-bottom:5px;position:relative}</p>
-<p class="p1">.rdvsub{font-size:13px;color:var(--muted);margin-bottom:1.5rem;line-height:1.55}</p>
-<p class="p1">.fg{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px}</p>
-<p class="p1">.ff{margin-bottom:10px}</p>
-<p class="p1">.flbl{font-size:11px;color:var(--muted);margin-bottom:4px;display:block;font-weight:500;letter-spacing:.03em}</p>
-<p class="p1">.fi{width:100%;background:var(--bg3);border:0.5px solid var(--border);border-radius:10px;padding:10px 12px;font-size:13px;color:var(--white);outline:none;transition:border-color .15s}</p>
-<p class="p1">.fi::placeholder{color:rgba(255,255,255,0.2)}</p>
-<p class="p1">.fi:focus{border-color:rgba(34,197,94,0.5)}</p>
-<p class="p1">.fsel{width:100%;background:var(--bg3);border:0.5px solid var(--border);border-radius:10px;padding:10px 12px;font-size:13px;color:var(--white);outline:none;cursor:pointer;-webkit-appearance:none}</p>
-<p class="p1">.fsel option{background:#1E2028}</p>
-<p class="p1">.rg{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:1rem}</p>
-<p class="p1">.rb{background:var(--bg3);border:0.5px solid var(--border);color:var(--muted);font-size:12px;padding:6px 13px;border-radius:20px;cursor:pointer;font-weight:500;transition:all .15s}</p>
-<p class="p1">.rb.on{background:var(--neon-dim);color:var(--neon);border-color:rgba(34,197,94,0.4)}</p>
-<p class="p1">.sub{background:var(--neon);color:#052E16;border:none;padding:13px;border-radius:12px;font-size:14px;font-weight:600;cursor:pointer;width:100%;margin-top:4px;transition:opacity .15s}</p>
-<p class="p1">.sub:hover{opacity:.88}</p>
-<p class="p1">.faq-item{border-bottom:0.5px solid var(--border);padding:14px 0;cursor:pointer}</p>
-<p class="p1">.faq-q{display:flex;justify-content:space-between;align-items:center;font-size:14px;font-weight:500;color:var(--white);gap:12px}</p>
-<p class="p1">.faq-a{font-size:13px;color:var(--muted);line-height:1.6;margin-top:8px;display:none}</p>
-<p class="p1">.faq-a.open{display:block}</p>
-<p class="p1">.chev{transition:transform .2s;font-size:13px;color:var(--muted);flex-shrink:0}</p>
-<p class="p1">.chev.open{transform:rotate(180deg)}</p>
-<p class="p1">.footer{text-align:center;padding:1.5rem 0;border-top:0.5px solid var(--border)}</p>
-<p class="p1">.flogo{font-size:20px;font-weight:600;letter-spacing:-.04em;margin-bottom:8px}</p>
-<p class="p1">.footer p{font-size:11px;color:var(--muted);line-height:1.7}</p>
-<p class="p1">@media(max-width:540px){</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.steps{grid-template-columns:1fr}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.stats{grid-template-columns:1fr 1fr}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.compare{grid-template-columns:1fr}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.trust{grid-template-columns:1fr 1fr}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.fg{grid-template-columns:1fr}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.hero h1{font-size:26px}</p>
-<p class="p1">}</p>
-<p class="p1">&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p1">&lt;div class="wrap"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;nav class="nav"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;a class="logo" href="#"&gt;&lt;span class="g"&gt;Start&lt;/span&gt;&lt;span class="v"&gt;3&lt;/span&gt;&lt;span class="y"&gt;A&lt;/span&gt;&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="langs"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="lng on" onclick="sl('fr',this)"&gt;FR&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="lng" onclick="sl('de',this)"&gt;DE&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="lng" onclick="sl('en',this)"&gt;EN&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p1">&lt;/nav&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;section class="hero"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="hero-glow1"&gt;&lt;/div&gt;&lt;div class="hero-glow2"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="htag" id="htag"&gt;Conseil neutre &amp; indépendant · Suisse&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;h1 id="htitle"&gt;Comprends ton 3ème pilier.&lt;br&gt;&lt;span class="acc"&gt;Choisis librement.&lt;/span&gt;&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;p id="hsub"&gt;Pas de discours de vente. On t'explique tout clairement, on compare les offres du marché pour toi, et tu décides en toute connaissance de cause. Certifié IAF, 8 ans d'expérience, trilingue.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="cta-row"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;button class="btn-prime" id="hcta" onclick="window.open('https://calendly.com/start-start3a/30min','_blank')"&gt;Prendre un RDV gratuit&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;button class="btn-sec" id="hgh" onclick="document.getElementById('calc').scrollIntoView({behavior:'smooth'})"&gt;Calculer mon économie →&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p1">&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;div class="promise" id="promise"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="promise-icon"&gt;🤝&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h4 id="pr-title"&gt;Notre engagement : neutralité totale&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p id="pr-desc"&gt;On n'est lié à aucune banque ni aucun assureur. Notre seul objectif : t'expliquer honnêtement comment fonctionne le 3ème pilier, comparer les solutions disponibles sur le marché, et te laisser choisir celle qui te convient vraiment — sans pression, sans commission cachée.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;div class="steps"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="step s1"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="snum"&gt;1&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;span class="sicon"&gt;🎓&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h4 id="s1t"&gt;On t'explique tout&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p id="s1d"&gt;Fonctionnement, avantages fiscaux, différences banque/assurance. En clair, sans jargon.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="step s2"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="snum"&gt;2&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;span class="sicon"&gt;🔍&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h4 id="s2t"&gt;On compare pour toi&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p id="s2d"&gt;On analyse les offres de plusieurs partenaires et on te présente les meilleures selon ta situation.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="step s3"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="snum"&gt;3&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;span class="sicon"&gt;✅&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h4 id="s3t"&gt;Tu décides librement&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p id="s3d"&gt;Aucune pression. Tu choisis ce qui te convient, ou tu ne choisis pas. On s'occupe du reste si tu le souhaites.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;div class="stats"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="stat"&gt;&lt;div class="stn ng" id="sn1"&gt;CHF 7'258&lt;/div&gt;&lt;div class="stl" id="sl1"&gt;Déductible / an&lt;/div&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="stat"&gt;&lt;div class="stn nv" id="sn2"&gt;2 RDV&lt;/div&gt;&lt;div class="stl" id="sl2"&gt;À distance&lt;/div&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="stat"&gt;&lt;div class="stn na" id="sn3"&gt;8 ans&lt;/div&gt;&lt;div class="stl" id="sl3"&gt;D'expérience métier&lt;/div&gt;&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;div class="calc" id="calc"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="calc-glow"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="ch"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="cico"&gt;📊&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h3 id="ctit"&gt;Calcule ton économie d'impôt&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="sl-row"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="sl-lbl"&gt;&lt;span id="clr"&gt;Revenu annuel brut&lt;/span&gt;&lt;strong id="rvout"&gt;CHF 75'000&lt;/strong&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;input type="range" min="30000" max="200000" step="1000" value="75000" id="slrv" oninput="calc()"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="sl-row"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="sl-lbl"&gt;&lt;span id="clv"&gt;Versement 3a annuel&lt;/span&gt;&lt;strong id="vrout"&gt;CHF 7'258&lt;/strong&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;input type="range" min="500" max="7258" step="100" value="7258" id="slvr" oninput="calc()"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="res"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="res-l"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p id="crl"&gt;Économie d'impôt estimée&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;span id="crv"&gt;CHF 1'850&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;button class="res-btn" id="crc" onclick="window.open('https://calendly.com/start-start3a/30min','_blank')"&gt;Je veux ça&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;p class="cdisc" id="cdisc"&gt;Estimation indicative · taux moyen ~25% · varie selon canton et situation&lt;/p&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;div class="sec"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;p class="slbl" id="cmpl"&gt;Banque vs assurance&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;h2 class="sh2" id="cmph"&gt;On te présente les deux options. Tu choisis.&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;p class="ssub" id="cmps"&gt;Les deux donnent droit à la déduction fiscale. Il n'y a pas de mauvaise réponse — seulement celle qui correspond à ta situation. On t'aide à y voir clair.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="compare"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="cc rec"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="cbdg r" id="bdr"&gt;Souvent recommandé&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;h4 id="cit"&gt;3A Assurance&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p id="cid"&gt;Idéal si tu veux une protection en plus. En cas de décès ou d'invalidité, les primes continuent d'être versées. Plusieurs assureurs comparés pour toi.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="ft y" id="f1"&gt;✓ Couverture décès &amp; invalidité&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="ft y" id="f2"&gt;✓ Capital garanti possible&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="ft y" id="f3"&gt;✓ Déduction fiscale complète&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="ft y" id="f4"&gt;✓ Option investie (rendement)&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="ft y" id="f5"&gt;✓ Suivi inclus&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="cc"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="cbdg a" id="bda"&gt;Selon profil&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;h4 id="cbt"&gt;3A Bancaire (investi)&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p id="cbd"&gt;Plus flexible, sans engagement long terme. Opte pour une solution investie en titres — bien mieux qu'un compte épargne standard. Plusieurs banques comparées.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="ft y" id="g1"&gt;✓ Flexibilité totale&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="ft y" id="g2"&gt;✓ Investi en ETFs / fonds&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="ft y" id="g3"&gt;✓ Déduction fiscale complète&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="ft n" id="g4"&gt;✗ Pas de couverture assurance&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="ft n" id="g5"&gt;✗ Pas de capital garanti&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;div class="trust"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="tc"&gt;&lt;span class="tico"&gt;🎓&lt;/span&gt;&lt;div class="tlbl" id="t1l"&gt;Certifié IAF&lt;/div&gt;&lt;div class="tsub" id="t1s"&gt;Diplôme fédéral · 8 ans d'expérience&lt;/div&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="tc"&gt;&lt;span class="tico"&gt;⚖️&lt;/span&gt;&lt;div class="tlbl" id="t2l"&gt;100% neutre&lt;/div&gt;&lt;div class="tsub" id="t2s"&gt;Aucun lien exclusif avec une banque ou assureur&lt;/div&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="tc"&gt;&lt;span class="tico"&gt;🌍&lt;/span&gt;&lt;div class="tlbl" id="t3l"&gt;Trilingue&lt;/div&gt;&lt;div class="tsub" id="t3s"&gt;FR / DE / EN — à ton choix&lt;/div&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="tc"&gt;&lt;span class="tico"&gt;💻&lt;/span&gt;&lt;div class="tlbl" id="t4l"&gt;100% à distance&lt;/div&gt;&lt;div class="tsub" id="t4s"&gt;Visio, simple, depuis où tu veux&lt;/div&gt;&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;div class="rdv" id="rdv"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="rdv-glow"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;h3 id="rt"&gt;Prends ton 1er RDV gratuit&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;p class="rdvsub" id="rs"&gt;Un premier échange de 20-30 min pour comprendre ta situation et répondre à toutes tes questions — sans te vendre quoi que ce soit. Tu repartiras avec une vision claire, que tu décides de continuer ou non.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="fg"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div&gt;&lt;label class="flbl" id="lpr"&gt;Prénom&lt;/label&gt;&lt;input class="fi" type="text" placeholder="Alex"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div&gt;&lt;label class="flbl" id="lno"&gt;Nom&lt;/label&gt;&lt;input class="fi" type="text" placeholder="Dupont"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="fg"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div&gt;&lt;label class="flbl" id="lem"&gt;Email&lt;/label&gt;&lt;input class="fi" type="email" placeholder="alex@mail.com"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div&gt;&lt;label class="flbl" id="lte"&gt;Téléphone&lt;/label&gt;&lt;input class="fi" type="tel" placeholder="+41 79 000 00 00"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="ff"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;label class="flbl" id="lcn"&gt;Canton&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;select class="fsel" id="fcn"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;option&gt;Valais (VS)&lt;/option&gt;&lt;option&gt;Vaud (VD)&lt;/option&gt;&lt;option&gt;Genève (GE)&lt;/option&gt;&lt;option&gt;Fribourg (FR)&lt;/option&gt;&lt;option&gt;Neuchâtel (NE)&lt;/option&gt;&lt;option&gt;Jura (JU)&lt;/option&gt;&lt;option&gt;Berne (BE)&lt;/option&gt;&lt;option&gt;Zurich (ZH)&lt;/option&gt;&lt;option&gt;Lucerne (LU)&lt;/option&gt;&lt;option&gt;Autre&lt;/option&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/select&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="ff"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;label class="flbl" id="lq1"&gt;Tu as déjà un 3ème pilier ?&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="rg"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="rb on" id="q1a" onclick="sr('q1','a')"&gt;Non, je commence&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="rb" id="q1b" onclick="sr('q1','b')"&gt;Oui, j'en ai un&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="rb" id="q1c" onclick="sr('q1','c')"&gt;Pas sûr&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="ff"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;label class="flbl" id="lq2"&gt;Tu pencherais vers ?&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="rg"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="rb on" id="q2a" onclick="sr('q2','a')"&gt;Assurance&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="rb" id="q2b" onclick="sr('q2','b')"&gt;Banque&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="rb" id="q2c" onclick="sr('q2','c')"&gt;Pas encore décidé&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;button class="sub" id="rcta" onclick="window.open('https://calendly.com/start-start3a/30min','_blank')"&gt;Je prends mon 1er RDV gratuit →&lt;/button&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;div class="sec"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;p class="slbl" id="faql"&gt;Questions fréquentes&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="faq-item" onclick="tf(0)"&gt;&lt;div class="faq-q"&gt;&lt;span id="fq0"&gt;À partir de quel âge peut-on ouvrir un 3ème pilier ?&lt;/span&gt;&lt;span class="chev" id="fc0"&gt;▾&lt;/span&gt;&lt;/div&gt;&lt;div class="faq-a" id="fa0"&gt;Dès ton premier emploi avec un revenu AVS en Suisse, en général à 17-18 ans. Plus tu commences tôt, plus l'effet des intérêts composés joue pour toi sur 40 ans.&lt;/div&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="faq-item" onclick="tf(1)"&gt;&lt;div class="faq-q"&gt;&lt;span id="fq1"&gt;Dois-je verser le maximum chaque année ?&lt;/span&gt;&lt;span class="chev" id="fc1"&gt;▾&lt;/span&gt;&lt;/div&gt;&lt;div class="faq-a" id="fa1"&gt;Non. Tu verses ce que tu veux jusqu'au plafond (CHF 7'258 en 2026). Même 100 CHF/mois c'est déjà très bien. Et depuis 2026, tu peux rattraper les années manquées rétroactivement !&lt;/div&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="faq-item" onclick="tf(2)"&gt;&lt;div class="faq-q"&gt;&lt;span id="fq2"&gt;Peut-on récupérer l'argent avant la retraite ?&lt;/span&gt;&lt;span class="chev" id="fc2"&gt;▾&lt;/span&gt;&lt;/div&gt;&lt;div class="faq-a" id="fa2"&gt;Oui, dans certains cas : achat d'un logement principal, départ de Suisse, début d'activité indépendante. Un argument fort pour financer un apport immobilier.&lt;/div&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="faq-item" onclick="tf(3)"&gt;&lt;div class="faq-q"&gt;&lt;span id="fq3"&gt;Le conseil est vraiment gratuit et sans engagement ?&lt;/span&gt;&lt;span class="chev" id="fc3"&gt;▾&lt;/span&gt;&lt;/div&gt;&lt;div class="faq-a" id="fa3"&gt;Oui, à 100%. Le premier RDV est un échange informatif — tu n'es obligé de souscrire quoi que ce soit. Si tu choisis une solution, la rémunération est prise en charge par le partenaire, pas par toi.&lt;/div&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="faq-item" onclick="tf(4)"&gt;&lt;div class="faq-q"&gt;&lt;span id="fq4"&gt;Pourquoi faire appel à un conseiller plutôt que de tout faire seul ?&lt;/span&gt;&lt;span class="chev" id="fc4"&gt;▾&lt;/span&gt;&lt;/div&gt;&lt;div class="faq-a" id="fa4"&gt;Les solutions 3a varient énormément en termes de coûts, rendements et couvertures. Un conseiller indépendant compare pour toi ce que tu mettrais des heures à analyser seul — et t'évite les erreurs classiques comme ouvrir un 3a non investi ou mal adapté à ta situation.&lt;/div&gt;&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;footer class="footer"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="flogo"&gt;&lt;span class="g"&gt;Start&lt;/span&gt;&lt;span class="v"&gt;3&lt;/span&gt;&lt;span class="y"&gt;A&lt;/span&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;p id="footxt"&gt;Conseil indépendant &amp; neutre en prévoyance · Suisse · FR / DE / EN&lt;br&gt;Certifié IAF · 8 ans d'expérience · Conseil à distance · &lt;a href="mailto:start@start3a.ch" style="color:var(--neon);text-decoration:none"&gt;start@start3a.ch&lt;/a&gt;&lt;br&gt;Information à caractère général, ne constitue pas un conseil en placement au sens de la FINMA.&lt;/p&gt;</p>
-<p class="p1">&lt;/footer&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;script&gt;</p>
-<p class="p1">const L={</p>
-<p class="p1">fr:{tag:"Conseil neutre &amp; indépendant · Suisse",h1:'Comprends ton 3ème pilier.&lt;br&gt;&lt;span class="acc"&gt;Choisis librement.&lt;/span&gt;',hs:"Pas de discours de vente. On t'explique tout clairement, on compare les offres du marché pour toi, et tu décides en toute connaissance de cause. Certifié IAF, 8 ans d'expérience, trilingue.",hc:"Prendre un RDV gratuit",hg:"Calculer mon économie →",prt:"Notre engagement : neutralité totale",prd:"On n'est lié à aucune banque ni aucun assureur. Notre seul objectif : t'expliquer honnêtement comment fonctionne le 3ème pilier, comparer les solutions disponibles sur le marché, et te laisser choisir celle qui te convient vraiment — sans pression, sans commission cachée.",s1t:"On t'explique tout",s1d:"Fonctionnement, avantages fiscaux, différences banque/assurance. En clair, sans jargon.",s2t:"On compare pour toi",s2d:"On analyse les offres de plusieurs partenaires et on te présente les meilleures selon ta situation.",s3t:"Tu décides librement",s3d:"Aucune pression. Tu choisis ce qui te convient, ou tu ne choisis pas. On s'occupe du reste si tu le souhaites.",sn1:"CHF 7'258",sl1:"Déductible / an",sn2:"2 RDV",sl2:"À distance",sn3:"8 ans",sl3:"D'expérience métier",ct:"Calcule ton économie d'impôt",clr:"Revenu annuel brut",clv:"Versement 3a annuel",crl:"Économie d'impôt estimée",crc:"Je veux ça",cd:"Estimation indicative · taux moyen ~25% · varie selon canton et situation",cmpl:"Banque vs assurance",cmph:"On te présente les deux options. Tu choisis.",cmps:"Les deux donnent droit à la déduction fiscale. Il n'y a pas de mauvaise réponse — seulement celle qui correspond à ta situation. On t'aide à y voir clair.",br:"Souvent recommandé",ba:"Selon profil",cit:"3A Assurance",cid:"Idéal si tu veux une protection en plus. En cas de décès ou d'invalidité, les primes continuent d'être versées. Plusieurs assureurs comparés pour toi.",cbt:"3A Bancaire (investi)",cbd:"Plus flexible, sans engagement long terme. Opte pour une solution investie en titres. Plusieurs banques comparées.",f1:"✓ Couverture décès &amp; invalidité",f2:"✓ Capital garanti possible",f3:"✓ Déduction fiscale complète",f4:"✓ Option investie (rendement)",f5:"✓ Suivi inclus",g1:"✓ Flexibilité totale",g2:"✓ Investi en ETFs / fonds",g3:"✓ Déduction fiscale complète",g4:"✗ Pas de couverture assurance",g5:"✗ Pas de capital garanti",t1l:"Certifié IAF",t1s:"Diplôme fédéral · 8 ans d'expérience",t2l:"100% neutre",t2s:"Aucun lien exclusif avec une banque ou assureur",t3l:"Trilingue",t3s:"FR / DE / EN — à ton choix",t4l:"100% à distance",t4s:"Visio, simple, depuis où tu veux",rt:"Prends ton 1er RDV gratuit",rs:"Un premier échange de 20-30 min pour comprendre ta situation et répondre à toutes tes questions — sans te vendre quoi que ce soit. Tu repartiras avec une vision claire, que tu décides de continuer ou non.",lpr:"Prénom",lno:"Nom",lem:"Email",lte:"Téléphone",lcn:"Canton",lq1:"Tu as déjà un 3ème pilier ?",q1a:"Non, je commence",q1b:"Oui, j'en ai un",q1c:"Pas sûr",lq2:"Tu pencherais vers ?",q2a:"Assurance",q2b:"Banque",q2c:"Pas encore décidé",rc:"Je prends mon 1er RDV gratuit →",faql:"Questions fréquentes",fq:["À partir de quel âge peut-on ouvrir un 3ème pilier ?","Dois-je verser le maximum chaque année ?","Peut-on récupérer l'argent avant la retraite ?","Le conseil est vraiment gratuit et sans engagement ?","Pourquoi faire appel à un conseiller plutôt que de tout faire seul ?"],fa:["Dès ton premier emploi avec un revenu AVS en Suisse, en général à 17-18 ans. Plus tu commences tôt, plus l'effet des intérêts composés joue pour toi sur 40 ans.","Non. Tu verses ce que tu veux jusqu'au plafond (CHF 7'258 en 2026). Même 100 CHF/mois c'est déjà très bien. Et depuis 2026, tu peux rattraper les années manquées rétroactivement !","Oui, dans certains cas : achat d'un logement principal, départ de Suisse, début d'activité indépendante. Un argument fort pour financer un apport immobilier.","Oui, à 100%. Le premier RDV est un échange informatif — tu n'es obligé de souscrire quoi que ce soit. Si tu choisis une solution, la rémunération est prise en charge par le partenaire, pas par toi.","Les solutions 3a varient énormément en termes de coûts, rendements et couvertures. Un conseiller indépendant compare pour toi ce que tu mettrais des heures à analyser seul — et t'évite les erreurs classiques comme ouvrir un 3a non investi ou mal adapté à ta situation."],ft:"Conseil indépendant &amp; neutre en prévoyance · Suisse · FR / DE / EN&lt;br&gt;Certifié IAF · 8 ans d'expérience · Conseil à distance · &lt;a href='mailto:start@start3a.ch' style='color:var(--neon);text-decoration:none'&gt;start@start3a.ch&lt;/a&gt;&lt;br&gt;Information à caractère général, ne constitue pas un conseil en placement au sens de la FINMA."},</p>
-<p class="p1">de:{tag:"Neutrale &amp; unabhängige Beratung · Schweiz",h1:'Versteh deine Säule 3a.&lt;br&gt;&lt;span class="acc"&gt;Entscheide frei.&lt;/span&gt;',hs:"Kein Verkaufsgespräch. Wir erklären dir alles klar und verständlich, vergleichen die Marktangebote für dich — und du entscheidest in voller Kenntnis der Lage. IAF-zertifiziert, 8 Jahre Erfahrung, dreisprachig.",hc:"Gratis Termin buchen",hg:"Steuerersparnis berechnen →",prt:"Unser Versprechen: vollständige Neutralität",prd:"Wir sind an keine Bank und keinen Versicherer gebunden. Unser einziges Ziel: dir ehrlich erklären, wie die Säule 3a funktioniert, die verfügbaren Lösungen vergleichen und dich frei wählen lassen — ohne Druck, ohne versteckte Provision.",s1t:"Wir erklären alles",s1d:"Funktionsweise, Steuervorteile, Unterschiede Bank/Versicherung. Klar, ohne Fachjargon.",s2t:"Wir vergleichen für dich",s2d:"Wir analysieren Angebote mehrerer Partner und zeigen dir die besten für deine Situation.",s3t:"Du entscheidest frei",s3d:"Kein Druck. Du wählst was passt — oder nicht. Wir kümmern uns um den Rest, wenn du möchtest.",sn1:"CHF 7'258",sl1:"Pro Jahr abziehbar",sn2:"2 Termine",sl2:"Aus der Ferne",sn3:"8 Jahre",sl3:"Berufserfahrung",ct:"Berechne deine Steuerersparnis",clr:"Jährl. Bruttoeinkommen",clv:"Jährl. 3a-Einzahlung",crl:"Geschätzte Steuerersparnis",crc:"Das will ich",cd:"Indikative Schätzung · ~25% · variiert je nach Kanton",cmpl:"Bank vs Versicherung",cmph:"Wir zeigen dir beide Optionen. Du wählst.",cmps:"Beide berechtigen zum Steuerabzug. Es gibt keine falsche Antwort — nur die, die zu deiner Situation passt. Wir helfen dir, Klarheit zu gewinnen.",br:"Oft empfohlen",ba:"Je nach Profil",cit:"3A Versicherung",cid:"Ideal wenn du zusätzlichen Schutz möchtest. Bei Tod oder Invalidität laufen Prämien weiter. Mehrere Versicherer verglichen.",cbt:"3A Bank (investiert)",cbd:"Flexibler, ohne langfristige Bindung. Investierte Lösung in Wertpapiere. Mehrere Banken verglichen.",f1:"✓ Todes- &amp; Invaliditätsschutz",f2:"✓ Garantiertes Kapital möglich",f3:"✓ Voller Steuerabzug",f4:"✓ Investitionsoption",f5:"✓ Begleitung inklusive",g1:"✓ Volle Flexibilität",g2:"✓ In ETFs / Fonds investiert",g3:"✓ Voller Steuerabzug",g4:"✗ Kein Versicherungsschutz",g5:"✗ Kein garantiertes Kapital",t1l:"IAF-zertifiziert",t1s:"Eidg. Diplom · 8 Jahre Erfahrung",t2l:"100% neutral",t2s:"Keine exklusive Bindung an Bank oder Versicherer",t3l:"Dreisprachig",t3s:"DE / FR / EN — nach Wahl",t4l:"100% fernmündlich",t4s:"Video, einfach, von überall",rt:"1. Gratis-Termin buchen",rs:"Ein erstes Gespräch von 20-30 Min. um deine Situation zu verstehen und alle Fragen zu beantworten — ohne dir etwas zu verkaufen. Du gehst mit klarer Sicht raus, egal ob du weitermachst oder nicht.",lpr:"Vorname",lno:"Nachname",lem:"E-Mail",lte:"Telefon",lcn:"Kanton",lq1:"Hast du schon eine Säule 3a?",q1a:"Nein, ich fange an",q1b:"Ja, ich habe eine",q1c:"Nicht sicher",lq2:"Tendierst du zu?",q2a:"Versicherung",q2b:"Bank",q2c:"Noch nicht entschieden",rc:"1. Gratis-Termin buchen →",faql:"Häufige Fragen",fq:["Ab welchem Alter Säule 3a eröffnen?","Muss ich jedes Jahr den Maximalbetrag einzahlen?","Geld vor Pensionierung zurückziehen?","Ist die Beratung wirklich kostenlos und unverbindlich?","Warum einen Berater statt alles selbst machen?"],fa:["Sobald du in der Schweiz AHV-pflichtiges Einkommen hast, meist ab 17-18 Jahren. Je früher, desto mehr profitierst du vom Zinseszinseffekt.","Nein. Bis CHF 7'258 (2026). CHF 100/Monat ist schon gut. Ab 2026 Jahre rückwirkend nachholen!","Ja: Hauptwohnung kaufen, Schweiz verlassen, Selbständigkeit starten.","Ja, 100%. Das erste Gespräch ist informativ — du musst nichts abschliessen. Die Vergütung trägt der Partner, nicht du.","3a-Lösungen unterscheiden sich stark in Kosten, Renditen und Deckung. Ein unabhängiger Berater vergleicht für dich, was du stundenlang selbst analysieren müsstest."],ft:"Unabhängige &amp; neutrale Vorsorgeberatung · Schweiz · DE / FR / EN&lt;br&gt;IAF-zertifiziert · 8 Jahre Erfahrung · Fernberatung · &lt;a href='mailto:start@start3a.ch' style='color:var(--neon);text-decoration:none'&gt;start@start3a.ch&lt;/a&gt;&lt;br&gt;Allgemeine Information, keine Anlageberatung i.S.d. FINMA."},</p>
-<p class="p1">en:{tag:"Neutral &amp; independent advice · Switzerland",h1:'Understand your 3rd pillar.&lt;br&gt;&lt;span class="acc"&gt;Choose freely.&lt;/span&gt;',hs:"No sales pitch. We explain everything clearly, compare market offers for you, and let you decide with full knowledge of the facts. IAF certified, 8 years experience, trilingual.",hc:"Book a free appointment",hg:"Calculate my savings →",prt:"Our commitment: total neutrality",prd:"We are not tied to any bank or insurer. Our only goal: honestly explain how the 3rd pillar works, compare available solutions on the market, and let you choose the one that truly fits — no pressure, no hidden commission.",s1t:"We explain everything",s1d:"How it works, tax benefits, bank vs insurance differences. Clear, no jargon.",s2t:"We compare for you",s2d:"We analyse offers from multiple partners and present the best ones for your situation.",s3t:"You decide freely",s3d:"No pressure. You choose what suits you — or you don't. We handle the rest if you want.",sn1:"CHF 7,258",sl1:"Deductible / year",sn2:"2 appts",sl2:"Remote",sn3:"8 yrs",sl3:"Professional experience",ct:"Calculate your tax savings",clr:"Annual gross income",clv:"Annual 3a contribution",crl:"Estimated tax savings",crc:"I want this",cd:"Indicative estimate · ~25% avg · varies by canton",cmpl:"Bank vs insurance",cmph:"We present both options. You choose.",cmps:"Both give the tax deduction. There's no wrong answer — only the one that fits your situation. We help you see clearly.",br:"Often recommended",ba:"Profile dependent",cit:"3A Insurance",cid:"Ideal if you want extra protection. If you die or become disabled, premiums keep being paid. Multiple insurers compared for you.",cbt:"3A Bank (invested)",cbd:"More flexible, no long-term commitment. Invested solution in securities. Multiple banks compared.",f1:"✓ Death &amp; disability coverage",f2:"✓ Guaranteed capital possible",f3:"✓ Full tax deduction",f4:"✓ Investment option (returns)",f5:"✓ Follow-up included",g1:"✓ Full flexibility",g2:"✓ Invested in ETFs / funds",g3:"✓ Full tax deduction",g4:"✗ No insurance coverage",g5:"✗ No guaranteed capital",t1l:"IAF certified",t1s:"Federal diploma · 8 yrs experience",t2l:"100% neutral",t2s:"No exclusive tie to any bank or insurer",t3l:"Trilingual",t3s:"FR / DE / EN — your choice",t4l:"100% remote",t4s:"Video call, fast, from anywhere",rt:"Book your 1st free appointment",rs:"A first 20-30 min chat to understand your situation and answer all your questions — without selling you anything. You'll leave with a clear picture, whether you decide to continue or not.",lpr:"First name",lno:"Last name",lem:"Email",lte:"Phone",lcn:"Canton",lq1:"Do you already have a 3rd pillar?",q1a:"No, I'm starting",q1b:"Yes, I have one",q1c:"Not sure",lq2:"Would you lean towards?",q2a:"Insurance",q2b:"Bank",q2c:"Not decided yet",rc:"Book my 1st free appointment →",faql:"Frequently asked questions",fq:["From what age can I open a 3rd pillar?","Do I have to contribute the maximum every year?","Can I get my money back before retirement?","Is the advice really free and with no commitment?","Why use an advisor instead of doing it all myself?"],fa:["From your first job with AVS income in Switzerland, usually at 17-18. The earlier you start, the more compound interest works for you.","No. Up to CHF 7,258 (2026). CHF 100/month is already great. From 2026, you can catch up on missed years retroactively!","Yes: buying a primary residence, permanently leaving Switzerland, starting self-employment.","Yes, 100%. The first appointment is informational — you're not obliged to subscribe to anything. If you choose a solution, the fee is covered by the partner, not you.","3a solutions vary enormously in costs, returns and coverage. An independent advisor compares what would take you hours to analyse alone — and helps you avoid classic mistakes like opening a non-invested or poorly suited 3a account."],ft:"Independent &amp; neutral pension advice · Switzerland · FR / DE / EN&lt;br&gt;IAF certified · 8 yrs experience · Remote advice · &lt;a href='mailto:start@start3a.ch' style='color:var(--neon);text-decoration:none'&gt;start@start3a.ch&lt;/a&gt;&lt;br&gt;General information, not investment advice under FINMA."}</p>
-<p class="p1">};</p>
-<p class="p2"><br></p>
-<p class="p1">function fmt(n){return Math.round(n).toLocaleString('fr-CH')}</p>
-<p class="p1">function calc(){</p>
-<p class="p1"><span class="Apple-converted-space">  </span>const r=parseInt(document.getElementById('slrv').value);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>const v=parseInt(document.getElementById('slvr').value);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('rvout').textContent='CHF '+fmt(r);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('vrout').textContent='CHF '+fmt(v);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>const rate=r&lt;50000?.20:r&lt;80000?.255:r&lt;120000?.285:.31;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('crv').textContent='CHF '+fmt(Math.round(v*rate));</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">function sl(l,el){</p>
-<p class="p1"><span class="Apple-converted-space">  </span>document.querySelectorAll('.lng').forEach(e=&gt;e.classList.remove('on'));</p>
-<p class="p1"><span class="Apple-converted-space">  </span>el.classList.add('on');</p>
-<p class="p1"><span class="Apple-converted-space">  </span>const t=L[l];</p>
-<p class="p1"><span class="Apple-converted-space">  </span>const m={htag:'tag',htitle:'h1',hsub:'hs',hcta:'hc',hgh:'hg','pr-title':'prt','pr-desc':'prd',s1t:'s1t',s1d:'s1d',s2t:'s2t',s2d:'s2d',s3t:'s3t',s3d:'s3d',sn1:'sn1',sl1:'sl1',sn2:'sn2',sl2:'sl2',sn3:'sn3',sl3:'sl3',ctit:'ct',clr:'clr',clv:'clv',crl:'crl',crc:'crc',cdisc:'cd',cmpl:'cmpl',cmph:'cmph',cmps:'cmps',bdr:'br',bda:'ba',cit:'cit',cid:'cid',cbt:'cbt',cbd:'cbd',f1:'f1',f2:'f2',f3:'f3',f4:'f4',f5:'f5',g1:'g1',g2:'g2',g3:'g3',g4:'g4',g5:'g5',t1l:'t1l',t1s:'t1s',t2l:'t2l',t2s:'t2s',t3l:'t3l',t3s:'t3s',t4l:'t4l',t4s:'t4s',rt:'rt',rs:'rs',lpr:'lpr',lno:'lno',lem:'lem',lte:'lte',lcn:'lcn',lq1:'lq1',q1a:'q1a',q1b:'q1b',q1c:'q1c',lq2:'lq2',q2a:'q2a',q2b:'q2b',q2c:'q2c',rcta:'rc',faql:'faql'};</p>
-<p class="p1"><span class="Apple-converted-space">  </span>for(const[id,k]of Object.entries(m)){const e=document.getElementById(id);if(e)e.innerHTML=t[k];}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>for(let i=0;i&lt;5;i++){document.getElementById('fq'+i).textContent=t.fq[i];document.getElementById('fa'+i).textContent=t.fa[i];}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('footxt').innerHTML=t.ft;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>calc();</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">function sr(g,v){['a','b','c'].forEach(o=&gt;document.getElementById(g+o).classList.toggle('on',o===v));}</p>
-<p class="p1">function tf(i){const a=document.getElementById('fa'+i),c=document.getElementById('fc'+i),o=a.classList.contains('open');a.classList.toggle('open',!o);c.classList.toggle('open',!o);}</p>
-<p class="p1">calc();</p>
-<p class="p1">&lt;/script&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+<div class="wrap">
+
+<nav class="nav">
+  <a class="logo" href="#"><span class="g">Start</span><span class="v">3</span><span class="y">A</span></a>
+  <div class="langs">
+    <div class="lng on" onclick="sl('fr',this)">FR</div>
+    <div class="lng" onclick="sl('de',this)">DE</div>
+    <div class="lng" onclick="sl('en',this)">EN</div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-glow1"></div><div class="hero-glow2"></div>
+  <div class="htag" id="htag">Conseil neutre & indépendant · Suisse</div>
+  <h1 id="htitle">Comprends ton 3ème pilier.<br><span class="acc">Choisis librement.</span></h1>
+  <p id="hsub">Pas de discours de vente. On t'explique tout clairement, on compare les offres du marché pour toi, et tu décides en toute connaissance de cause. Certifié IAF, 8 ans d'expérience, trilingue.</p>
+  <div class="cta-row">
+    <button class="btn-prime" id="hcta" onclick="window.open('https://calendly.com/start-start3a/30min','_blank')">Prendre un RDV gratuit</button>
+    <button class="btn-sec" id="hgh" onclick="document.getElementById('calc').scrollIntoView({behavior:'smooth'})">Calculer mon économie →</button>
+  </div>
+</section>
+
+<div class="promise" id="promise">
+  <div class="promise-icon">🤝</div>
+  <div>
+    <h4 id="pr-title">Notre engagement : neutralité totale</h4>
+    <p id="pr-desc">On n'est lié à aucune banque ni aucun assureur. Notre seul objectif : t'expliquer honnêtement comment fonctionne le 3ème pilier, comparer les solutions disponibles sur le marché, et te laisser choisir celle qui te convient vraiment — sans pression, sans commission cachée.</p>
+  </div>
+</div>
+
+<div class="steps">
+  <div class="step s1">
+    <div class="snum">1</div>
+    <span class="sicon">🎓</span>
+    <h4 id="s1t">On t'explique tout</h4>
+    <p id="s1d">Fonctionnement, avantages fiscaux, différences banque/assurance. En clair, sans jargon.</p>
+  </div>
+  <div class="step s2">
+    <div class="snum">2</div>
+    <span class="sicon">🔍</span>
+    <h4 id="s2t">On compare pour toi</h4>
+    <p id="s2d">On analyse les offres de plusieurs partenaires et on te présente les meilleures selon ta situation.</p>
+  </div>
+  <div class="step s3">
+    <div class="snum">3</div>
+    <span class="sicon">✅</span>
+    <h4 id="s3t">Tu décides librement</h4>
+    <p id="s3d">Aucune pression. Tu choisis ce qui te convient, ou tu ne choisis pas. On s'occupe du reste si tu le souhaites.</p>
+  </div>
+</div>
+
+<div class="stats">
+  <div class="stat"><div class="stn ng" id="sn1">CHF 7'258</div><div class="stl" id="sl1">Déductible / an</div></div>
+  <div class="stat"><div class="stn nv" id="sn2">2 RDV</div><div class="stl" id="sl2">À distance</div></div>
+  <div class="stat"><div class="stn na" id="sn3">8 ans</div><div class="stl" id="sl3">D'expérience métier</div></div>
+</div>
+
+<div class="calc" id="calc">
+  <div class="calc-glow"></div>
+  <div class="ch">
+    <div class="cico">📊</div>
+    <h3 id="ctit">Calcule ton économie d'impôt</h3>
+  </div>
+  <div class="sl-row">
+    <div class="sl-lbl"><span id="clr">Revenu annuel brut</span><strong id="rvout">CHF 75'000</strong></div>
+    <input type="range" min="30000" max="200000" step="1000" value="75000" id="slrv" oninput="calc()">
+  </div>
+  <div class="sl-row">
+    <div class="sl-lbl"><span id="clv">Versement 3a annuel</span><strong id="vrout">CHF 7'258</strong></div>
+    <input type="range" min="500" max="7258" step="100" value="7258" id="slvr" oninput="calc()">
+  </div>
+  <div class="res">
+    <div class="res-l">
+      <p id="crl">Économie d'impôt estimée</p>
+      <span id="crv">CHF 1'850</span>
+    </div>
+    <button class="res-btn" id="crc" onclick="window.open('https://calendly.com/start-start3a/30min','_blank')">Je veux ça</button>
+  </div>
+  <p class="cdisc" id="cdisc">Estimation indicative · taux moyen ~25% · varie selon canton et situation</p>
+</div>
+
+<div class="sec">
+  <p class="slbl" id="cmpl">Banque vs assurance</p>
+  <h2 class="sh2" id="cmph">On te présente les deux options. Tu choisis.</h2>
+  <p class="ssub" id="cmps">Les deux donnent droit à la déduction fiscale. Il n'y a pas de mauvaise réponse — seulement celle qui correspond à ta situation. On t'aide à y voir clair.</p>
+  <div class="compare">
+    <div class="cc rec">
+      <span class="cbdg r" id="bdr">Souvent recommandé</span>
+      <h4 id="cit">3A Assurance</h4>
+      <p id="cid">Idéal si tu veux une protection en plus. En cas de décès ou d'invalidité, les primes continuent d'être versées. Plusieurs assureurs comparés pour toi.</p>
+      <div class="ft y" id="f1">✓ Couverture décès & invalidité</div>
+      <div class="ft y" id="f2">✓ Capital garanti possible</div>
+      <div class="ft y" id="f3">✓ Déduction fiscale complète</div>
+      <div class="ft y" id="f4">✓ Option investie (rendement)</div>
+      <div class="ft y" id="f5">✓ Suivi inclus</div>
+    </div>
+    <div class="cc">
+      <span class="cbdg a" id="bda">Selon profil</span>
+      <h4 id="cbt">3A Bancaire (investi)</h4>
+      <p id="cbd">Plus flexible, sans engagement long terme. Opte pour une solution investie en titres — bien mieux qu'un compte épargne standard. Plusieurs banques comparées.</p>
+      <div class="ft y" id="g1">✓ Flexibilité totale</div>
+      <div class="ft y" id="g2">✓ Investi en ETFs / fonds</div>
+      <div class="ft y" id="g3">✓ Déduction fiscale complète</div>
+      <div class="ft n" id="g4">✗ Pas de couverture assurance</div>
+      <div class="ft n" id="g5">✗ Pas de capital garanti</div>
+    </div>
+  </div>
+</div>
+
+<div class="trust">
+  <div class="tc"><span class="tico">🎓</span><div class="tlbl" id="t1l">Certifié IAF</div><div class="tsub" id="t1s">Diplôme fédéral · 8 ans d'expérience</div></div>
+  <div class="tc"><span class="tico">⚖️</span><div class="tlbl" id="t2l">100% neutre</div><div class="tsub" id="t2s">Aucun lien exclusif avec une banque ou assureur</div></div>
+  <div class="tc"><span class="tico">🌍</span><div class="tlbl" id="t3l">Trilingue</div><div class="tsub" id="t3s">FR / DE / EN — à ton choix</div></div>
+  <div class="tc"><span class="tico">💻</span><div class="tlbl" id="t4l">100% à distance</div><div class="tsub" id="t4s">Visio, simple, depuis où tu veux</div></div>
+</div>
+
+<div class="rdv" id="rdv">
+  <div class="rdv-glow"></div>
+  <h3 id="rt">Prends ton 1er RDV gratuit</h3>
+  <p class="rdvsub" id="rs">Un premier échange de 20-30 min pour comprendre ta situation et répondre à toutes tes questions — sans te vendre quoi que ce soit. Tu repartiras avec une vision claire, que tu décides de continuer ou non.</p>
+  <div class="fg">
+    <div><label class="flbl" id="lpr">Prénom</label><input class="fi" type="text" placeholder="Alex"></div>
+    <div><label class="flbl" id="lno">Nom</label><input class="fi" type="text" placeholder="Dupont"></div>
+  </div>
+  <div class="fg">
+    <div><label class="flbl" id="lem">Email</label><input class="fi" type="email" placeholder="alex@mail.com"></div>
+    <div><label class="flbl" id="lte">Téléphone</label><input class="fi" type="tel" placeholder="+41 79 000 00 00"></div>
+  </div>
+  <div class="ff">
+    <label class="flbl" id="lcn">Canton</label>
+    <select class="fsel" id="fcn">
+      <option>Valais (VS)</option><option>Vaud (VD)</option><option>Genève (GE)</option><option>Fribourg (FR)</option><option>Neuchâtel (NE)</option><option>Jura (JU)</option><option>Berne (BE)</option><option>Zurich (ZH)</option><option>Lucerne (LU)</option><option>Autre</option>
+    </select>
+  </div>
+  <div class="ff">
+    <label class="flbl" id="lq1">Tu as déjà un 3ème pilier ?</label>
+    <div class="rg">
+      <div class="rb on" id="q1a" onclick="sr('q1','a')">Non, je commence</div>
+      <div class="rb" id="q1b" onclick="sr('q1','b')">Oui, j'en ai un</div>
+      <div class="rb" id="q1c" onclick="sr('q1','c')">Pas sûr</div>
+    </div>
+  </div>
+  <div class="ff">
+    <label class="flbl" id="lq2">Tu pencherais vers ?</label>
+    <div class="rg">
+      <div class="rb on" id="q2a" onclick="sr('q2','a')">Assurance</div>
+      <div class="rb" id="q2b" onclick="sr('q2','b')">Banque</div>
+      <div class="rb" id="q2c" onclick="sr('q2','c')">Pas encore décidé</div>
+    </div>
+  </div>
+  <button class="sub" id="rcta" onclick="window.open('https://calendly.com/start-start3a/30min','_blank')">Je prends mon 1er RDV gratuit →</button>
+</div>
+
+<div class="sec">
+  <p class="slbl" id="faql">Questions fréquentes</p>
+  <div class="faq-item" onclick="tf(0)"><div class="faq-q"><span id="fq0">À partir de quel âge peut-on ouvrir un 3ème pilier ?</span><span class="chev" id="fc0">▾</span></div><div class="faq-a" id="fa0">Dès ton premier emploi avec un revenu AVS en Suisse, en général à 17-18 ans. Plus tu commences tôt, plus l'effet des intérêts composés joue pour toi sur 40 ans.</div></div>
+  <div class="faq-item" onclick="tf(1)"><div class="faq-q"><span id="fq1">Dois-je verser le maximum chaque année ?</span><span class="chev" id="fc1">▾</span></div><div class="faq-a" id="fa1">Non. Tu verses ce que tu veux jusqu'au plafond (CHF 7'258 en 2026). Même 100 CHF/mois c'est déjà très bien. Et depuis 2026, tu peux rattraper les années manquées rétroactivement !</div></div>
+  <div class="faq-item" onclick="tf(2)"><div class="faq-q"><span id="fq2">Peut-on récupérer l'argent avant la retraite ?</span><span class="chev" id="fc2">▾</span></div><div class="faq-a" id="fa2">Oui, dans certains cas : achat d'un logement principal, départ de Suisse, début d'activité indépendante. Un argument fort pour financer un apport immobilier.</div></div>
+  <div class="faq-item" onclick="tf(3)"><div class="faq-q"><span id="fq3">Le conseil est vraiment gratuit et sans engagement ?</span><span class="chev" id="fc3">▾</span></div><div class="faq-a" id="fa3">Oui, à 100%. Le premier RDV est un échange informatif — tu n'es obligé de souscrire quoi que ce soit. Si tu choisis une solution, la rémunération est prise en charge par le partenaire, pas par toi.</div></div>
+  <div class="faq-item" onclick="tf(4)"><div class="faq-q"><span id="fq4">Pourquoi faire appel à un conseiller plutôt que de tout faire seul ?</span><span class="chev" id="fc4">▾</span></div><div class="faq-a" id="fa4">Les solutions 3a varient énormément en termes de coûts, rendements et couvertures. Un conseiller indépendant compare pour toi ce que tu mettrais des heures à analyser seul — et t'évite les erreurs classiques comme ouvrir un 3a non investi ou mal adapté à ta situation.</div></div>
+</div>
+
+<footer class="footer">
+  <div class="flogo"><span class="g">Start</span><span class="v">3</span><span class="y">A</span></div>
+  <p id="footxt">Conseil indépendant & neutre en prévoyance · Suisse · FR / DE / EN<br>Certifié IAF · 8 ans d'expérience · Conseil à distance · <a href="mailto:start@start3a.ch" style="color:var(--neon);text-decoration:none">start@start3a.ch</a><br>Information à caractère général, ne constitue pas un conseil en placement au sens de la FINMA.</p>
+</footer>
+
+</div>
+<script>
+const L={
+fr:{tag:"Conseil neutre & indépendant · Suisse",h1:'Comprends ton 3ème pilier.<br><span class="acc">Choisis librement.</span>',hs:"Pas de discours de vente. On t'explique tout clairement, on compare les offres du marché pour toi, et tu décides en toute connaissance de cause. Certifié IAF, 8 ans d'expérience, trilingue.",hc:"Prendre un RDV gratuit",hg:"Calculer mon économie →",prt:"Notre engagement : neutralité totale",prd:"On n'est lié à aucune banque ni aucun assureur. Notre seul objectif : t'expliquer honnêtement comment fonctionne le 3ème pilier, comparer les solutions disponibles sur le marché, et te laisser choisir celle qui te convient vraiment — sans pression, sans commission cachée.",s1t:"On t'explique tout",s1d:"Fonctionnement, avantages fiscaux, différences banque/assurance. En clair, sans jargon.",s2t:"On compare pour toi",s2d:"On analyse les offres de plusieurs partenaires et on te présente les meilleures selon ta situation.",s3t:"Tu décides librement",s3d:"Aucune pression. Tu choisis ce qui te convient, ou tu ne choisis pas. On s'occupe du reste si tu le souhaites.",sn1:"CHF 7'258",sl1:"Déductible / an",sn2:"2 RDV",sl2:"À distance",sn3:"8 ans",sl3:"D'expérience métier",ct:"Calcule ton économie d'impôt",clr:"Revenu annuel brut",clv:"Versement 3a annuel",crl:"Économie d'impôt estimée",crc:"Je veux ça",cd:"Estimation indicative · taux moyen ~25% · varie selon canton et situation",cmpl:"Banque vs assurance",cmph:"On te présente les deux options. Tu choisis.",cmps:"Les deux donnent droit à la déduction fiscale. Il n'y a pas de mauvaise réponse — seulement celle qui correspond à ta situation. On t'aide à y voir clair.",br:"Souvent recommandé",ba:"Selon profil",cit:"3A Assurance",cid:"Idéal si tu veux une protection en plus. En cas de décès ou d'invalidité, les primes continuent d'être versées. Plusieurs assureurs comparés pour toi.",cbt:"3A Bancaire (investi)",cbd:"Plus flexible, sans engagement long terme. Opte pour une solution investie en titres. Plusieurs banques comparées.",f1:"✓ Couverture décès & invalidité",f2:"✓ Capital garanti possible",f3:"✓ Déduction fiscale complète",f4:"✓ Option investie (rendement)",f5:"✓ Suivi inclus",g1:"✓ Flexibilité totale",g2:"✓ Investi en ETFs / fonds",g3:"✓ Déduction fiscale complète",g4:"✗ Pas de couverture assurance",g5:"✗ Pas de capital garanti",t1l:"Certifié IAF",t1s:"Diplôme fédéral · 8 ans d'expérience",t2l:"100% neutre",t2s:"Aucun lien exclusif avec une banque ou assureur",t3l:"Trilingue",t3s:"FR / DE / EN — à ton choix",t4l:"100% à distance",t4s:"Visio, simple, depuis où tu veux",rt:"Prends ton 1er RDV gratuit",rs:"Un premier échange de 20-30 min pour comprendre ta situation et répondre à toutes tes questions — sans te vendre quoi que ce soit. Tu repartiras avec une vision claire, que tu décides de continuer ou non.",lpr:"Prénom",lno:"Nom",lem:"Email",lte:"Téléphone",lcn:"Canton",lq1:"Tu as déjà un 3ème pilier ?",q1a:"Non, je commence",q1b:"Oui, j'en ai un",q1c:"Pas sûr",lq2:"Tu pencherais vers ?",q2a:"Assurance",q2b:"Banque",q2c:"Pas encore décidé",rc:"Je prends mon 1er RDV gratuit →",faql:"Questions fréquentes",fq:["À partir de quel âge peut-on ouvrir un 3ème pilier ?","Dois-je verser le maximum chaque année ?","Peut-on récupérer l'argent avant la retraite ?","Le conseil est vraiment gratuit et sans engagement ?","Pourquoi faire appel à un conseiller plutôt que de tout faire seul ?"],fa:["Dès ton premier emploi avec un revenu AVS en Suisse, en général à 17-18 ans. Plus tu commences tôt, plus l'effet des intérêts composés joue pour toi sur 40 ans.","Non. Tu verses ce que tu veux jusqu'au plafond (CHF 7'258 en 2026). Même 100 CHF/mois c'est déjà très bien. Et depuis 2026, tu peux rattraper les années manquées rétroactivement !","Oui, dans certains cas : achat d'un logement principal, départ de Suisse, début d'activité indépendante. Un argument fort pour financer un apport immobilier.","Oui, à 100%. Le premier RDV est un échange informatif — tu n'es obligé de souscrire quoi que ce soit. Si tu choisis une solution, la rémunération est prise en charge par le partenaire, pas par toi.","Les solutions 3a varient énormément en termes de coûts, rendements et couvertures. Un conseiller indépendant compare pour toi ce que tu mettrais des heures à analyser seul — et t'évite les erreurs classiques comme ouvrir un 3a non investi ou mal adapté à ta situation."],ft:"Conseil indépendant & neutre en prévoyance · Suisse · FR / DE / EN<br>Certifié IAF · 8 ans d'expérience · Conseil à distance · <a href='mailto:start@start3a.ch' style='color:var(--neon);text-decoration:none'>start@start3a.ch</a><br>Information à caractère général, ne constitue pas un conseil en placement au sens de la FINMA."},
+de:{tag:"Neutrale & unabhängige Beratung · Schweiz",h1:'Versteh deine Säule 3a.<br><span class="acc">Entscheide frei.</span>',hs:"Kein Verkaufsgespräch. Wir erklären dir alles klar und verständlich, vergleichen die Marktangebote für dich — und du entscheidest in voller Kenntnis der Lage. IAF-zertifiziert, 8 Jahre Erfahrung, dreisprachig.",hc:"Gratis Termin buchen",hg:"Steuerersparnis berechnen →",prt:"Unser Versprechen: vollständige Neutralität",prd:"Wir sind an keine Bank und keinen Versicherer gebunden. Unser einziges Ziel: dir ehrlich erklären, wie die Säule 3a funktioniert, die verfügbaren Lösungen vergleichen und dich frei wählen lassen — ohne Druck, ohne versteckte Provision.",s1t:"Wir erklären alles",s1d:"Funktionsweise, Steuervorteile, Unterschiede Bank/Versicherung. Klar, ohne Fachjargon.",s2t:"Wir vergleichen für dich",s2d:"Wir analysieren Angebote mehrerer Partner und zeigen dir die besten für deine Situation.",s3t:"Du entscheidest frei",s3d:"Kein Druck. Du wählst was passt — oder nicht. Wir kümmern uns um den Rest, wenn du möchtest.",sn1:"CHF 7'258",sl1:"Pro Jahr abziehbar",sn2:"2 Termine",sl2:"Aus der Ferne",sn3:"8 Jahre",sl3:"Berufserfahrung",ct:"Berechne deine Steuerersparnis",clr:"Jährl. Bruttoeinkommen",clv:"Jährl. 3a-Einzahlung",crl:"Geschätzte Steuerersparnis",crc:"Das will ich",cd:"Indikative Schätzung · ~25% · variiert je nach Kanton",cmpl:"Bank vs Versicherung",cmph:"Wir zeigen dir beide Optionen. Du wählst.",cmps:"Beide berechtigen zum Steuerabzug. Es gibt keine falsche Antwort — nur die, die zu deiner Situation passt. Wir helfen dir, Klarheit zu gewinnen.",br:"Oft empfohlen",ba:"Je nach Profil",cit:"3A Versicherung",cid:"Ideal wenn du zusätzlichen Schutz möchtest. Bei Tod oder Invalidität laufen Prämien weiter. Mehrere Versicherer verglichen.",cbt:"3A Bank (investiert)",cbd:"Flexibler, ohne langfristige Bindung. Investierte Lösung in Wertpapiere. Mehrere Banken verglichen.",f1:"✓ Todes- & Invaliditätsschutz",f2:"✓ Garantiertes Kapital möglich",f3:"✓ Voller Steuerabzug",f4:"✓ Investitionsoption",f5:"✓ Begleitung inklusive",g1:"✓ Volle Flexibilität",g2:"✓ In ETFs / Fonds investiert",g3:"✓ Voller Steuerabzug",g4:"✗ Kein Versicherungsschutz",g5:"✗ Kein garantiertes Kapital",t1l:"IAF-zertifiziert",t1s:"Eidg. Diplom · 8 Jahre Erfahrung",t2l:"100% neutral",t2s:"Keine exklusive Bindung an Bank oder Versicherer",t3l:"Dreisprachig",t3s:"DE / FR / EN — nach Wahl",t4l:"100% fernmündlich",t4s:"Video, einfach, von überall",rt:"1. Gratis-Termin buchen",rs:"Ein erstes Gespräch von 20-30 Min. um deine Situation zu verstehen und alle Fragen zu beantworten — ohne dir etwas zu verkaufen. Du gehst mit klarer Sicht raus, egal ob du weitermachst oder nicht.",lpr:"Vorname",lno:"Nachname",lem:"E-Mail",lte:"Telefon",lcn:"Kanton",lq1:"Hast du schon eine Säule 3a?",q1a:"Nein, ich fange an",q1b:"Ja, ich habe eine",q1c:"Nicht sicher",lq2:"Tendierst du zu?",q2a:"Versicherung",q2b:"Bank",q2c:"Noch nicht entschieden",rc:"1. Gratis-Termin buchen →",faql:"Häufige Fragen",fq:["Ab welchem Alter Säule 3a eröffnen?","Muss ich jedes Jahr den Maximalbetrag einzahlen?","Geld vor Pensionierung zurückziehen?","Ist die Beratung wirklich kostenlos und unverbindlich?","Warum einen Berater statt alles selbst machen?"],fa:["Sobald du in der Schweiz AHV-pflichtiges Einkommen hast, meist ab 17-18 Jahren. Je früher, desto mehr profitierst du vom Zinseszinseffekt.","Nein. Bis CHF 7'258 (2026). CHF 100/Monat ist schon gut. Ab 2026 Jahre rückwirkend nachholen!","Ja: Hauptwohnung kaufen, Schweiz verlassen, Selbständigkeit starten.","Ja, 100%. Das erste Gespräch ist informativ — du musst nichts abschliessen. Die Vergütung trägt der Partner, nicht du.","3a-Lösungen unterscheiden sich stark in Kosten, Renditen und Deckung. Ein unabhängiger Berater vergleicht für dich, was du stundenlang selbst analysieren müsstest."],ft:"Unabhängige & neutrale Vorsorgeberatung · Schweiz · DE / FR / EN<br>IAF-zertifiziert · 8 Jahre Erfahrung · Fernberatung · <a href='mailto:start@start3a.ch' style='color:var(--neon);text-decoration:none'>start@start3a.ch</a><br>Allgemeine Information, keine Anlageberatung i.S.d. FINMA."},
+en:{tag:"Neutral & independent advice · Switzerland",h1:'Understand your 3rd pillar.<br><span class="acc">Choose freely.</span>',hs:"No sales pitch. We explain everything clearly, compare market offers for you, and let you decide with full knowledge of the facts. IAF certified, 8 years experience, trilingual.",hc:"Book a free appointment",hg:"Calculate my savings →",prt:"Our commitment: total neutrality",prd:"We are not tied to any bank or insurer. Our only goal: honestly explain how the 3rd pillar works, compare available solutions on the market, and let you choose the one that truly fits — no pressure, no hidden commission.",s1t:"We explain everything",s1d:"How it works, tax benefits, bank vs insurance differences. Clear, no jargon.",s2t:"We compare for you",s2d:"We analyse offers from multiple partners and present the best ones for your situation.",s3t:"You decide freely",s3d:"No pressure. You choose what suits you — or you don't. We handle the rest if you want.",sn1:"CHF 7,258",sl1:"Deductible / year",sn2:"2 appts",sl2:"Remote",sn3:"8 yrs",sl3:"Professional experience",ct:"Calculate your tax savings",clr:"Annual gross income",clv:"Annual 3a contribution",crl:"Estimated tax savings",crc:"I want this",cd:"Indicative estimate · ~25% avg · varies by canton",cmpl:"Bank vs insurance",cmph:"We present both options. You choose.",cmps:"Both give the tax deduction. There's no wrong answer — only the one that fits your situation. We help you see clearly.",br:"Often recommended",ba:"Profile dependent",cit:"3A Insurance",cid:"Ideal if you want extra protection. If you die or become disabled, premiums keep being paid. Multiple insurers compared for you.",cbt:"3A Bank (invested)",cbd:"More flexible, no long-term commitment. Invested solution in securities. Multiple banks compared.",f1:"✓ Death & disability coverage",f2:"✓ Guaranteed capital possible",f3:"✓ Full tax deduction",f4:"✓ Investment option (returns)",f5:"✓ Follow-up included",g1:"✓ Full flexibility",g2:"✓ Invested in ETFs / funds",g3:"✓ Full tax deduction",g4:"✗ No insurance coverage",g5:"✗ No guaranteed capital",t1l:"IAF certified",t1s:"Federal diploma · 8 yrs experience",t2l:"100% neutral",t2s:"No exclusive tie to any bank or insurer",t3l:"Trilingual",t3s:"FR / DE / EN — your choice",t4l:"100% remote",t4s:"Video call, fast, from anywhere",rt:"Book your 1st free appointment",rs:"A first 20-30 min chat to understand your situation and answer all your questions — without selling you anything. You'll leave with a clear picture, whether you decide to continue or not.",lpr:"First name",lno:"Last name",lem:"Email",lte:"Phone",lcn:"Canton",lq1:"Do you already have a 3rd pillar?",q1a:"No, I'm starting",q1b:"Yes, I have one",q1c:"Not sure",lq2:"Would you lean towards?",q2a:"Insurance",q2b:"Bank",q2c:"Not decided yet",rc:"Book my 1st free appointment →",faql:"Frequently asked questions",fq:["From what age can I open a 3rd pillar?","Do I have to contribute the maximum every year?","Can I get my money back before retirement?","Is the advice really free and with no commitment?","Why use an advisor instead of doing it all myself?"],fa:["From your first job with AVS income in Switzerland, usually at 17-18. The earlier you start, the more compound interest works for you.","No. Up to CHF 7,258 (2026). CHF 100/month is already great. From 2026, you can catch up on missed years retroactively!","Yes: buying a primary residence, permanently leaving Switzerland, starting self-employment.","Yes, 100%. The first appointment is informational — you're not obliged to subscribe to anything. If you choose a solution, the fee is covered by the partner, not you.","3a solutions vary enormously in costs, returns and coverage. An independent advisor compares what would take you hours to analyse alone — and helps you avoid classic mistakes like opening a non-invested or poorly suited 3a account."],ft:"Independent & neutral pension advice · Switzerland · FR / DE / EN<br>IAF certified · 8 yrs experience · Remote advice · <a href='mailto:start@start3a.ch' style='color:var(--neon);text-decoration:none'>start@start3a.ch</a><br>General information, not investment advice under FINMA."}
+};
+
+function fmt(n){return Math.round(n).toLocaleString('fr-CH')}
+function calc(){
+  const r=parseInt(document.getElementById('slrv').value);
+  const v=parseInt(document.getElementById('slvr').value);
+  document.getElementById('rvout').textContent='CHF '+fmt(r);
+  document.getElementById('vrout').textContent='CHF '+fmt(v);
+  const rate=r<50000?.20:r<80000?.255:r<120000?.285:.31;
+  document.getElementById('crv').textContent='CHF '+fmt(Math.round(v*rate));
+}
+
+function sl(l,el){
+  document.querySelectorAll('.lng').forEach(e=>e.classList.remove('on'));
+  el.classList.add('on');
+  const t=L[l];
+  const m={htag:'tag',htitle:'h1',hsub:'hs',hcta:'hc',hgh:'hg','pr-title':'prt','pr-desc':'prd',s1t:'s1t',s1d:'s1d',s2t:'s2t',s2d:'s2d',s3t:'s3t',s3d:'s3d',sn1:'sn1',sl1:'sl1',sn2:'sn2',sl2:'sl2',sn3:'sn3',sl3:'sl3',ctit:'ct',clr:'clr',clv:'clv',crl:'crl',crc:'crc',cdisc:'cd',cmpl:'cmpl',cmph:'cmph',cmps:'cmps',bdr:'br',bda:'ba',cit:'cit',cid:'cid',cbt:'cbt',cbd:'cbd',f1:'f1',f2:'f2',f3:'f3',f4:'f4',f5:'f5',g1:'g1',g2:'g2',g3:'g3',g4:'g4',g5:'g5',t1l:'t1l',t1s:'t1s',t2l:'t2l',t2s:'t2s',t3l:'t3l',t3s:'t3s',t4l:'t4l',t4s:'t4s',rt:'rt',rs:'rs',lpr:'lpr',lno:'lno',lem:'lem',lte:'lte',lcn:'lcn',lq1:'lq1',q1a:'q1a',q1b:'q1b',q1c:'q1c',lq2:'lq2',q2a:'q2a',q2b:'q2b',q2c:'q2c',rcta:'rc',faql:'faql'};
+  for(const[id,k]of Object.entries(m)){const e=document.getElementById(id);if(e)e.innerHTML=t[k];}
+  for(let i=0;i<5;i++){document.getElementById('fq'+i).textContent=t.fq[i];document.getElementById('fa'+i).textContent=t.fa[i];}
+  document.getElementById('footxt').innerHTML=t.ft;
+  calc();
+}
+
+function sr(g,v){['a','b','c'].forEach(o=>document.getElementById(g+o).classList.toggle('on',o===v));}
+function tf(i){const a=document.getElementById('fa'+i),c=document.getElementById('fc'+i),o=a.classList.contains('open');a.classList.toggle('open',!o);c.classList.toggle('open',!o);}
+calc();
+</script>
 </body>
 </html>
